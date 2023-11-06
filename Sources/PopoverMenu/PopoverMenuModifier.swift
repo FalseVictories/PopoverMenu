@@ -9,9 +9,9 @@ import AppKit
 import Foundation
 import SwiftUI
 
-private struct PopoverAnchorView<PopupMenuContent>: NSViewRepresentable where PopupMenuContent: View {
+private struct PopoverAnchorView<PopoverMenuContent>: NSViewRepresentable where PopoverMenuContent: View {
     let isShown: Binding<Bool>
-    let content: () -> PopupMenuContent
+    let content: () -> PopoverMenuContent
     let view = NSView()
 
     func makeNSView(context: Context) -> NSView {
@@ -74,9 +74,9 @@ private struct PopoverAnchorView<PopupMenuContent>: NSViewRepresentable where Po
     }
 }
 
-struct PopupMenuModifier<PopupMenuContent>: ViewModifier where PopupMenuContent: View {
+struct PopoverMenuModifier<PopoverMenuContent>: ViewModifier where PopoverMenuContent: View {
     let isPresented: Binding<Bool>
-    let contentBlock: () -> PopupMenuContent
+    let contentBlock: () -> PopoverMenuContent
 
     func body(content: Content) -> some View {
         return content

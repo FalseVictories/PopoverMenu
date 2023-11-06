@@ -1,7 +1,7 @@
 import XCTest
-@testable import PopupMenu
+@testable import PopoverMenu
 
-final class PopupMenuTests: XCTestCase {
+final class PopoverMenuTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest

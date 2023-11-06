@@ -54,7 +54,7 @@ public struct MenuButton<Content: View, MenuContent: View>: View {
                 .brightness(hover ? 0.1 : 0)
         }
         .buttonStyle(.borderless)
-        .popupMenu(isPresented: $isShown) {
+        .popoverMenu(isPresented: $isShown) {
             VStack(alignment: .leading) {
                 menu(context)
             }
